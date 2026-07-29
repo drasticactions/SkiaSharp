@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0-tizen8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp.Views" Version="4.151.0-rc.1.1" />
+    <PackageReference Include="SkiaSharp" Version="4.151.0-rc.1.1" />
+  </ItemGroup>
+</Project>

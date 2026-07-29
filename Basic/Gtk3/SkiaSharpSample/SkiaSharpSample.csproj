@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainWindow.glade" />
+    <EmbeddedResource Include="CpuPage.glade" />
+    <EmbeddedResource Include="DrawingPage.glade" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="SkiaSharp" Version="4.151.0-rc.1.1" />
+    <PackageReference Include="SkiaSharp.Views.Desktop.Common" Version="4.151.0-rc.1.1" />
+    <PackageReference Include="SkiaSharp.Views.Gtk3" Version="4.151.0-rc.1.1" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>SkiaSharpSample</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="HarfBuzzSharp" Version="14.2.1.1-rc.1.1" />
+    <PackageReference Include="SkiaSharp.Skottie" Version="4.151.0-rc.1.1" />
+    <PackageReference Include="SkiaSharp" Version="4.151.0-rc.1.1" />
+    <PackageReference Include="SkiaSharp.HarfBuzz" Version="4.151.0-rc.1.1" />
+    <PackageReference Include="Svg.Skia" Version="2.0.0.8" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Media\*" Link="Resources\Media\%(Filename)%(Extension)" />
+    <EmbeddedResource Remove="Media\content-font.ttf" />
+  </ItemGroup>
+  <!-- Stamp build metadata into assembly attributes -->
+  <PropertyGroup>
+    <BuildFooter></BuildFooter>
+  </PropertyGroup>
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>BuildTimestampUtc</_Parameter1>
+      <_Parameter2>$([System.DateTime]::UtcNow.ToString("o"))</_Parameter2>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadataAttribute">
+      <_Parameter1>BuildFooter</_Parameter1>
+      <_Parameter2>$(BuildFooter)</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+</Project>
